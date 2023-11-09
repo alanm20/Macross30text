@@ -4,7 +4,7 @@
 Export/Import game text. for main story dialog translation
 
 
-# For archive purpose, tool is not being update
+# For archival purpose, tool is not being update
 - Use QuickBMS and script to extract data.dat and get game GOP archive and *.GOP file.
 - Extract Japanese text from game *.GOP file  to [UTF-8] text file.
 - Import translated  [UTF-8] text file back to game .GOP file.
@@ -31,16 +31,16 @@ Export/Import game text. for main story dialog translation
 - you will find all gop file under GOP_out/data/gop/*.gop
 - not all gop file contain text, the important one are gop_battletext.gop , gop_dictionary, gop_scenariotext.gop, gop_subquesttext.gop. Check every gop file.
 - you can use utf-8+hex editor to replace japanese text in gop file, provided that new text is shorter than japanese text
-==
-== [ optional start ] this section is optional. 
-== Export Utf-8 text :  m30text.exe GOP_out/data/gop/gop_battletext.gop >  battletext_jap.txt
-== Do not change the special position tag ( start with "_0." ) in the exported text file. Focus on translate just the text itself, use a text editor that support UTF-8 text (i.e. notepad++).
-== Line break are important and nessessary. If you break up a line, the same text will also turn into two lines in game. This is nesessary due to japanese does not use space to separate words. There is no auto line break support in game code.
-==  There is a limitation of the text import. the TOTAL tranlated text length cannot be larger than the orignal japanese text length. so be concise when tranlate the text. English translation seems always shorter than Japanese (each japanese UTF-8 character equal to 3 english alphabets).
-== Import translated text back to gop file:  m30text.exe  GOP_out/data/gop/gop_battletext.gop  battletext_eng.txt
-== you will get a  GOP_out/data/gop/gop_battletext.gop.trn file. copy it to gop_mod/data/gop/gop_battletext.gop (see import instruction below)
-== [ optional end ]
-==
+- ==
+- == [ optional start ] this section is optional. 
+- == Export Utf-8 text :  m30text.exe GOP_out/data/gop/gop_battletext.gop >  battletext_jap.txt
+- == Do not change the special position tag ( start with "_0." ) in the exported text file. Focus on translate just the text itself, use a text editor that support UTF-8 text (i.e. notepad++).
+- == Line break are important and nessessary. If you break up a line, the same text will also turn into two lines in game. This is nesessary due to japanese does not use space to separate words. There is no auto line break support in game code.
+- ==  There is a limitation of the text import. the TOTAL tranlated text length cannot be larger than the orignal japanese text length. so be concise when tranlate the text. English translation seems always shorter than Japanese (each japanese UTF-8 character equal to 3 english alphabets).
+- == Import translated text back to gop file:  m30text.exe  GOP_out/data/gop/gop_battletext.gop  battletext_eng.txt
+- == you will get a  GOP_out/data/gop/gop_battletext.gop.trn file. copy it to gop_mod/data/gop/gop_battletext.gop (see import instruction below)
+- == [ optional end ]
+- ==
 - Import modified gop file to GOP archive : first create a new empty path contains the modified gop_battletext.gop file
 -           mkdir  gop_mod/data/gop/
 -           copy    gop_out/data/gop/gop_battletext.gop  gop_mod/data/gop/

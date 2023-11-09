@@ -1,0 +1,61 @@
+# Macross PSP PIDX (script 0.2.1) - offset2
+# script for QuickBMS http://quickbms.aluigi.org
+# extract raw files from offset2 file table
+
+get TMP filename
+open FDSE TMP 1     # use filenum 0 for data files
+
+idstring 1 "PIDX"
+get PACKS_OFF long 1
+get PACKS long 1
+get INFO_OFF long 1
+get FILES long 1
+get DUMMY long 1    # 0, 1, 3 and so on
+get OFFSET2 long 1
+get OFFSET2_SIZE long 1
+get NAMES_OFF long 1
+get NAMES_SIZE long 1
+
+log MEMORY_FILE2 OFFSET2 OFFSET2_SIZE 1
+log MEMORY_FILE3 NAMES_OFF NAMES_SIZE 1
+
+math LAST_PACK_NAME_OFF = -1
+
+get FILES long MEMORY_FILE2
+
+for i = 0 < FILES
+
+    get FINFO_OFF long MEMORY_FILE2
+
+    savepos ENTRY_OFF MEMORY_FILE2
+	
+	goto FINFO_OFF MEMORY_FILE2 
+
+    get NAME_OFF long MEMORY_FILE2
+	get PACK_NAME_OFF long MEMORY_FILE2
+	get FILE_OFF long MEMORY_FILE2
+	get FILE_SIZE long MEMORY_FILE2
+	
+	goto NAME_OFF MEMORY_FILE3
+	get NAME string MEMORY_FILE3
+	
+        if PACK_NAME_OFF != LAST_PACK_NAME_OFF
+            math LAST_PACK_NAME_OFF = PACK_NAME_OFF
+            goto PACK_NAME_OFF MEMORY_FILE3
+            get TMP string MEMORY_FILE3
+            open FDSE TMP 0 EXISTS
+            if EXISTS == 0
+                set TMP filename TMP    # remove data/pack/
+                open FDSE TMP 0 EXISTS
+            endif
+            # please note that there are duplicated names not related to
+            # the name of the pack, therefore using its basename as path
+            # is totally useless because duplicates persist
+        endif
+	
+	
+	log  NAME FILE_OFF FILE_SIZE
+	
+	goto ENTRY_OFF MEMORY_FILE2
+next i
+

@@ -35,9 +35,9 @@ Export/Import game text. for main story dialog, mission text etc. translation
 - ==
 - == [ optional start ] this section is optional. 
 - == Export Utf-8 text :  m30text.exe GOP_out/data/gop/gop_battletext.gop >  battletext_jap.txt
-- == translate text in export files. Do not change the special position tag ( start with "_0." ) in the exported text file. Focus on translate just the text itself, use a text editor that support UTF-8 text (i.e. notepad++).
-- == Line break are important and nessessary. If you break up a line, the same text will also break into two lines in game. This is nesessary due to japanese does not use space to separate words. There is no auto line warp support in game code.
-- ==  There is a limitation on the compressed text size. the translated text will be compressed during repack, game will freeze if compressed size is bigger than original gop. So be concise when translate the text. English translation seem compressed well and I have not have any issue.
+- == translate text in exported files. Do not change the special position tag ( start with "_0." ) in the exported text file. Focus on translate just the text itself, use a text editor that support UTF-8 text (i.e. notepad++).
+- == Manual line breaks are important and nessessary. Break up a long text line into multiple lines if it wraps incorrectly in game. This is nesessary due to japanese does not use space to separate words, line wrap can happen between any characters. There is no western word warp support in game code.
+- ==  There is a limitation on the compressed text size. the translated text will be compressed during repack, game will freeze if compressed size is bigger than original gop. So be concise when translate the text. English translation compressed well and I have not seen any issue.
 - == Import translated text back to gop file:  m30text.exe  GOP_out/data/gop/gop_battletext.gop  battletext_eng.txt
 - == you may see a warning about gop file is bigger than original. that may be okay as the gop reimport step will compress it.
 - == you will get a  GOP_out/data/gop/gop_battletext.gop.trn file. copy it to gop_mod/data/gop/gop_battletext.gop (see import instruction below)

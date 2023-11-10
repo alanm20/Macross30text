@@ -6,15 +6,16 @@ Export/Import game text. for main story dialog, mission text etc. translation
 - Most on screen UI text are actually images. those can only be change using paint application
 
 
-# For archival purpose, tool is not being update
+# For archival purpose, no update to tool
 - Use QuickBMS and script to extract data.dat and get game GOP archive and *.GOP file.
 - Extract Japanese text from game *.GOP file  to [UTF-8] text file.
 - Import translated  [UTF-8] text file back to game .GOP file.
 - Repack .GOP back to GOP archive and then back to data.dat
 
-# acknowledgment
+# Acknowledgment
 - Luigi Auriemma : the expert of game file extraction. author of QuickBMS.exe, macross_pidx.bms, macross_fsts.bms and many tools.
-- I simply discovered that there is a hidden section of data.dat that contain the actual gop text file, made macross_pidx_off2.bms to extract that.
+
+I discovered that there is a second copy of gop arihive inside data.dat which contains the actual gop text files, made macross_pidx_off2.bms to extract that.
 
 # How to use
  You need a modded PS3 game console to get the data.dat file. After the game installed, use ftp to copy data.dat from the console harddisk, something like this:
@@ -55,11 +56,11 @@ Export/Import game text. for main story dialog, mission text etc. translation
 -  FTP this modified data.dat back to PS3 console harddrive and replaced the original data.dat
 -  If you have RPCS3 emulator , you can test this data.dat with that. But this game is not fully playable with emulator. 
 
-# other files. There are images, 3D model files in  data*.dat  and fileset*.dat file. they can be extract with 
+# Other files. There are images, LUA script and 3D model files inside data*.dat  and fileset*.dat file. they can be extract with 
 -     quickbms.exe macross_pidx.bms  pack.idx   output_dir ( this extrace everything from data*.dat, probably also from fileset*.dat)
 -     quickbms.exe macross_fsts.bms fileset0.dat  output_dir ( this only extract one fileset0.dat, may be of some use)
 
-# bonus, use google translate to translate text file
+# Optional, use google translate to translate text file
      - Can use Google translate to do batch translate Japanese to English (or other languages).
      - Do not use the text box interface of google translate web page. Text box have maximum character limit.
      - start a new Microsoft word document (.docx). copy and paste the content of the export  UTF-8 Japanese text to it.

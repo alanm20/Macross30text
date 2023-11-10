@@ -27,14 +27,14 @@ Export/Import game text. for main story dialog, mission text etc. translation
 - run quickbms.exe macross_pidx_offset2.bms data.dat data_out
 - under data_out directory you will find a gop file. delete everything else, only left gop file in this folder.
 - go back  to the parent folder , where quickbms.exe is.
-- mkdir GOP_out
-- run  quickbms.exe macross_fsts.bms data_out/GOP gop_out
+- mkdir gop_out
+- run  quickbms.exe macross_fsts.bms data_out/gop gop_out
 - you will find all gop file under gop_out/data/gop/*.gop
 - not all gop file contain text, the important one are gop_battletext.gop , gop_dictionary, gop_scenariotext.gop, gop_subquesttext.gop. Check every gop file.
 - you can use utf-8+hex editor to replace japanese text in gop file, provided that new text is shorter than japanese text
 - ==
 - == [ optional start ] this section is optional. 
-- == Export Utf-8 text :  m30text.exe GOP_out/data/gop/gop_battletext.gop >  battletext_jap.txt
+- == Export Utf-8 text :  m30text.exe gop_out/data/gop/gop_battletext.gop >  battletext_jap.txt
 - == translate text in exported files. Do not change the special position tag ( start with "_0." ) in the exported text file. Focus on translate just the text itself, use a text editor that support UTF-8 text (i.e. notepad++).
 - == Manual line breaks are important and nessessary. Break up a long text line into multiple lines if it wraps incorrectly in game. This is nesessary due to japanese does not use space to separate words, line wrap can happen between any characters. There is no western word warp support in game code.
 - ==  There is a limitation on the compressed text size. the translated text will be compressed during repack, game will freeze if compressed size is bigger than original gop. So be concise when translate the text. English translation compressed well and I have not seen any issue.
@@ -43,9 +43,9 @@ Export/Import game text. for main story dialog, mission text etc. translation
 - == you will get a  GOP_out/data/gop/gop_battletext.gop.trn file. copy it to gop_mod/data/gop/gop_battletext.gop (see import instruction below)
 - == [ optional end ]
 - ==
-- Import just the modified .gop file to gop archive : first create a new empty path contains the modified gop_battletext.gop file
+- Import just the modified .gop file to gop archive : first create a new directory path reflecting the extract file path. copy and rename *.gop.trn to *.gop file
 -           mkdir  gop_mod/data/gop/
--           copy    gop_out/data/gop/gop_battletext.gop.trn  gop_mod/data/gop/
+-           copy    gop_out/data/gop/gop_battletext.gop.trn  gop_mod/data/gop/gop_battletext.gop
 -            # the following command give the new path to quickbms to reimport all files in that path back to out/gop file
 -           quickbms.exe -r -w  macross_fsts.bms data_out/gop gop_mod
 -            # if you get prompt for whether to use experimental reimport feature, anwser 'y'

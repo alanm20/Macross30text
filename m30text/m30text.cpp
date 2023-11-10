@@ -36,7 +36,10 @@ This scheme  minimizes the number of changes in string offsets.
 
 */
 
-#define VER_STR "0.0.1"
+#define VER_STR "0.0.2"
+
+// Nov-9-2023:  handle last blank line in translate text file. fix section 16 bit alignment 
+
 #define BUF_SZ 4096
 char buf[BUF_SZ];
 
@@ -129,19 +132,19 @@ void CreateTranslatedGOP(FILE* in, FILE* trans_in, FILE* out)
                 fread(offset_table, offset_table_size, 1, in);
                 fwrite(offset_table, offset_table_size, 1, out);
 
-                int output_off=0;
+                int output_off = 0;
                 bool bCheckValue = false;
                 bool EndOfText = false;
-                for (int i = 0; i < num_str; i++)
+                for (int i = 0; i < num_str; i++) // find offsets of each string entry, replace them with string from input text file
                 {
                     int offset;
                     int str_len = 0; // length  of text string
                     char* offset_entry = offset_table + (4 * i);   // fetch an offset from table
                     BEbytes2int(offset_entry, offset);
 
-                    fseek(in, data_start +values_offset + offset, SEEK_SET);  // jump to text position
+                    fseek(in, data_start + values_offset + offset, SEEK_SET);  // jump to text position
 
-                    // previous string is longer than original , shift this string to higher offset
+                    // previous string is longer than original , shift this string to bigger offset
                     if (output_off > offset)
                     {
                         int2BEbytes(offset_entry, output_off); // update string offset for this string
@@ -151,7 +154,7 @@ void CreateTranslatedGOP(FILE* in, FILE* trans_in, FILE* out)
                     bool utf8 = false;
                     long linepos = ftell(in);
 
-                    if (!EndOfText)
+                    if (!EndOfText)  // look ahead and detect utf-8 string
                     {
                         ch = fgetc(in);
                         int bi = 0;
@@ -164,79 +167,83 @@ void CreateTranslatedGOP(FILE* in, FILE* trans_in, FILE* out)
                                 break;
                             }
                             ch = fgetc(in);
-                            
 
-                        }                       
+
+                        }
                         fseek(in, linepos, SEEK_SET);
                         if (!strncmp(buf, "GOP_TYPE", 8))
                             EndOfText = true;
                     }
-                    if ( !EndOfText && utf8)
-                    //if ((ch & 0xc0) == 0xc0) // lazy utf-8 detection
+                    if (!EndOfText && utf8) // found utf8 string , replace it
+                        //if ((ch & 0xc0) == 0xc0) // lazy utf-8 detection
                     {
-                            // replace text with strings from text file.
-                            char* next_entry = offset_table + (4 * (i+1));
-                            int next_offset;
-                            BEbytes2int(next_entry, next_offset);
-                            int old_size = next_offset - offset;  //  how much space available for string replacement
+                        // replace text with strings from text file.
+                        char* next_entry = offset_table + (4 * (i + 1));
+                        int next_offset;
+                        BEbytes2int(next_entry, next_offset);
+                        int old_size = next_offset - offset;  //  how much space available for string replacement
 
-                             // get a line from translated text file 
-                            fgets(buf,BUF_SZ,trans_in);
-                            char* p = buf;
-                            if (strncmp(buf,"_0.",3))   // text must start with _0.<id> tag
-                                printf("error: input text file does not match gop, line %d\n", i);
+                         // get a line from translated text file 
+                        fgets(buf, BUF_SZ, trans_in);
+                        char* p = buf;
+                        if (strncmp(buf, "_0.", 3))   // text must start with _0.<id> tag
+                            printf("error: input text file does not match gop, line %d\n", i);
+                        else
+                        {
+
+                            int trans_idx = atoi(buf + 3);
+                            //printf("idx %d %d - \n", i,trans_idx);
+                            if (trans_idx != i)
+                                printf("error:  GOP and input text index does not match %d != %d\n", i, trans_idx);
+
+                            fgets(buf, BUF_SZ, trans_in); // get the real text line
+
+                            while (*p == ' ') p++; // skip leading space
+                        }
+                        while (*p && *p != '\n')  // copy text to output
+                        {
+                            str_len++;
+                            fputc(*p++, out);
+                        }
+                        long lastpos;
+                        while (!feof(trans_in)) // check for aditional lines for tranlated text
+                        {
+                            lastpos = ftell(trans_in); // remember last line end
+                            char* ret = fgets(buf, BUF_SZ, trans_in);
+
+                            if (!ret) break; //line is blank with no character, exit 
+
+                            if (strncmp(buf, "_0.", 3)) //does not start with _0. , this is addition lines of previous text 
+                            {
+
+                                str_len += 2;
+                                fprintf(out, "\\n");  //  newline
+                                p = buf;
+                                while (*p == ' ') p++; // skip leading space                               
+                                while (*p && *p != '\n') // copy text
+                                {
+                                    str_len++;
+                                    fputc(*p++, out);
+                                }
+                            }
                             else
                             {
-                                                            
-                                int trans_idx=atoi(buf+3);
-                                //printf("idx %d %d - \n", i,trans_idx);
-                                if (trans_idx != i)
-                                    printf("error:  GOP and input text index does not match %d != %d\n", i,trans_idx);
-
-                                fgets(buf, BUF_SZ, trans_in); // get the real text line
-                                
-                                while (*p == ' ') p++; // skip leading space
+                                // this is a translate string tag _0.nnnn.
+                                fseek(trans_in, lastpos, SEEK_SET); //new text string, roll back file position to previous line
+                                break;
                             }
-                            while (*p && *p != '\n')  // copy text to output
-                            {
-                                str_len++;
-                                fputc(*p++,out);
-                            }
-                            long lastpos;
-                            while (!feof(trans_in)) // check for aditional lines for this text
-                            {
-                                lastpos = ftell(trans_in); // remember last line end
-                                fgets(buf, BUF_SZ, trans_in);
-                                if (strncmp(buf,"_0.",3)) //does not start with _0. , this is addition lines of previous text 
-                                {
-
-                                    str_len += 2;
-                                    fprintf(out, "\\n");  //  newline
-                                    p = buf;
-                                    while (*p == ' ') p++; // skip leading space                               
-                                    while (*p && *p != '\n' ) // copy text
-                                    {
-                                        str_len++;
-                                        fputc(*p++, out);
-                                    }
-                                }
-                                else
-                                {
-                                    fseek(trans_in, lastpos, SEEK_SET); //new text string, roll back file position to previous line
-                                    break;
-                                }
-                            }
-                            int filler_len = old_size - 1 - str_len;
-                            for (int j = 0; j < filler_len; j++)
-                            {
-                                str_len++;
-                                fputc(0, out);
-                            }
+                        }
+                        int filler_len = old_size - 1 - str_len;
+                        for (int j = 0; j < filler_len; j++)
+                        {
                             str_len++;
-                            fputc(0, out); // terminate string with 0
+                            fputc(0, out);
+                        }
+                        str_len++;
+                        fputc(0, out); // terminate string with 0
                     }
                     else
-                    { 
+                    {
                         //str_len++;
                         //fputc(ch, out);
                         //if (ch != 0)
@@ -246,7 +253,7 @@ void CreateTranslatedGOP(FILE* in, FILE* trans_in, FILE* out)
                                 str_len++;
                                 fputc(ch, out);
                             }
-                            // terminate strign with value 0
+                            // terminate string with value 0
                             str_len++;
                             fputc(ch, out);
 
@@ -254,25 +261,36 @@ void CreateTranslatedGOP(FILE* in, FILE* trans_in, FILE* out)
 
                     }
                     // offset of next output strings
-                    output_off += str_len;            
+                    output_off += str_len;
                 }
                 fseek(out, offset_table_start, SEEK_SET);  // go back to where the string offset table is
                 fwrite(offset_table, 4, num_str + 1, out); // write out new string offset table
-
+                fflush(out);
                 fseek(out, 0, SEEK_END); // move to end of output file
 
-                long src=ftell(in);
+                long src = ftell(in);
                 long dst = ftell(out);
                 if (src != dst)
                 {
-                    printf("error: patched GOP is not the same size as original GOP. new strings may be too long\n");
+                    printf("Warning: patched GOP is not the same size as original GOP. new compressed GOP may be larger than original.\n");
                 }
-
+                
+                // make sure output section end at 16 bytes align
+                while (ftell(out) % 0x10)
+                    fputc(0, out);               
                 
                 ch = fgetc(in);
-                // copy rest of the GOP file to output
+                
                 while (!feof(in))
                 {
+                    if (ch == 'G')  // find input GOP GDAT
+                        break;
+                    ch = fgetc(in);
+                }
+                // copy rest of the gop file.
+                while (!feof(in))
+                {
+                    //putchar(ch);
                     fputc(ch, out);
                     ch = fgetc(in);
                 }
@@ -280,7 +298,7 @@ void CreateTranslatedGOP(FILE* in, FILE* trans_in, FILE* out)
             else
                 printf("memory allocation error\n");
         }
-        else (" No GERESTRT sectionm, aborted\n");
+        else (" No GERESTRT section, aborted\n");
         return;
 
 

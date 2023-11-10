@@ -1,0 +1,386 @@
+_0.20
+Prologue Testing East Contact
+_0.21
+Rion, who brought his luggage to the Ouroboros branch, is attacked by an unidentified army. Rion bravely fights back, but in a battle with the enemy's state-of-the-art machine...
+_0.22
+・Intercept the enemy
+_0.24
+1-1 TestingTesti girl
+_0.25
+Rion crashes on the planet Ouroboros and is rescued by a Zentraedi girl. The girl, who has a brain that could be called a genius, asks Rion for help as she tries to leave.
+_0.26
+・Go to the container collection area
+_0.27
+・Collect 5 containers
+_0.28
+・Return to my ship
+_0.30
+1-2 Bandit
+_0.31
+Rion is bullied by Aisha, the Ouroboros branch manager who is also a superior. The old Valkyrie, which has finally been able to transform into a Gerwalk, heads out to collect the container again...
+_0.32
+・Collect the three containers
+_0.33
+・Fight off the bandits
+_0.34
+・Collect the container
+_0.36
+1-3 Hunter Exam _
+_0.37
+Rion, who starts working at the Ouroboros branch, takes the hunter exam at Aisha's recommendation. The test was to receive the hunters' fancy baptism.
+_0.38
+・Head to Daoren's Hunter Guild
+_0.39
+・Obtain the Hunter Certification from Mimir Cave.
+_0.40
+・Report it at the Daoren Hunter Guild.
+_0.42
+1-4 Anomaly of Ouroboros
+_0.43
+After passing the hunter exam, Rion is invited by Aisha to take a sightseeing flight around the archipelago.
+_0.44
+After returning to Gefion after taking a sightseeing flight around the archipelago with Aisha, Rion receives a call from the Hunter's Guild and is tasked with suppressing the rampaging Zentraedi.
+_0.45
+・Take a scenic flight with Aisha to your destination
+_0.46
+- Investigate Ratatosk Cave
+_0.48
+1-5 Ruins Girl
+_0.49
+Rion heads to the Ouroboros ruins with Aisha. A ruin that holds secrets from a distant past. There, Rion will have another fateful encounter.
+_0.50
+・Head to the Belverk Ruins
+_0.51
+・Defeat Gunness
+_0.52
+- Investigate the Belverk ruins
+_0.54
+1-6 Buritai City
+_0.55
+According to Aisha, girls need various items around them. I decided to go to Britai City for Mina, who had just woken up from a long sleep...
+_0.56
+・Head to the shop in Buritai City
+_0.58
+1-7 Fragments of memory
+_0.59
+In order to learn about the relationship between Mina and the ruins, Aisha suggests investigating a ruin that she has been eyeing for a while. Will Mina be able to recover her memories, which seem to be shrouded in fog?
+_0.60
+- Investigate the Vavs ruins
+_0.62
+1-8 First Flight
+_0.63
+Mina is inspired by a culture different from the era in which she was born. Rion kindly teaches Mina, who is interested in Valkyrie. Aisha smiles at the two of them, but...
+_0.64
+・Watch Mina's pilot training
+_0.65
+・Collect Mina and 5 containers.
+_0.67
+2-1 Guardian of Vajra
+_0.68
+At the request of the Hunter Guild, Rion and his friends head to investigate the mysterious Valkyrie that protects Vajra. That's where they met...
+_0.69
+・Go to the designated point
+_0.70
+・Intercept Vajra
+_0.71
+・Defeat the Valkyrie that protects Vajra
+_0.73
+2-2 Galaxy Fairy
+_0.74
+The group is led by Sheryl and Alto to investigate the ruins. In the depths of a ruin built in ancient times, Mina tells the songstress Cheryl a wish entrusted to her from the past.
+_0.75
+- Investigate the Burleig Ruins
+_0.76
+・Fight off unidentified enemies
+_0.78
+2-3 Encounter
+_0.79
+Rion heads to Britai City after receiving a call from Leeron of the Hunter Guild.
+_0.80
+Rion received a request from Havamar through the Hunter Guild. They head to subdue Golden Talon, who has occupied an abandoned base.
+_0.81
+Rion, who received a request from Havamar through the Hunter Guild, successfully subdued Golden Talon, who had occupied the abandoned base. I will report the completion of the request to Aisha of Gefion...
+_0.82
+・Head to the Hunter Guild in Britai City.
+_0.83
+・Head to Pharos Base
+_0.84
+-Defeat the interception force
+_0.85
+- Investigate Pharos base
+_0.87
+2-4 Wanderer
+_0.88
+Rion flies around the entire archipelago in search of a missing hunter due to an urgent request from the Hunter Guild. As Bandit obstructs the search, the one person he meets...
+_0.89
+・Find the missing hunter [with map information]
+_0.91
+2-5 Cheryl Live
+_0.92
+The concert at Britai City, planned by Sheryl herself, begins. On this unknown planet, in an unknown future, I think of Ranka, who may have folded to another place...
+_0.93
+・Head to Britai City
+_0.94
+・Quiet the Zentraedi riot
+_0.96
+3-1 Khamjin, the ally killer
+_0.97
+The transport ship has been attacked by a stray Zentran! Rion receives a request from the Hunter Guild and rushes to the scene. It was that man who appeared during the fierce battle with the stray Zentran!
+_0.98
+・Head to the transport ship attack location
+_0.99
+・Defeat the Zentraedi
+_0.100
+・Defeat Kamjin
+_0.103
+The first ruins I visited with Mina were those associated with Mylene. A song filled with the feelings of being separated from family and friends echoes through the ruins.
+_0.105
+3-3 Mina's singing voice
+_0.106
+A Zentraedi rebellion breaks out in the mining caves. It is not difficult to suppress it by force, but suppressed dissatisfaction can flare up again. It is essential to restore calm to the Zentraedi's hearts.
+_0.107
+・Investigate Wernd Cave
+_0.109
+3-4 Mylene's Great Escape
+_0.110
+Did Mylène disappear from Gefion? Rion searches for Mylene with help from the Hunter Guild. Why did Mylène suddenly disappear?
+_0.111
+・Look for Mylène and head to Daoren.
+_0.112
+・Look for Mylène and head to Yue.
+_0.113
+・Go to Leopold City to find Mylène.
+_0.114
+・Find Mylene near Leopold City
+_0.115
+・Defeat the enemies attacking Mylene
+_0.117
+3-5 Huge guardian weapon of the ruins
+_0.118
+Aisha, who continues to analyze the ruins in order to move from the archipelago to other places, heads to Havamar to exchange opinions with Todo.
+_0.119
+Rion and his friends decide to investigate the ruins before heading to the desert. Overcome the obstacles of the bandits and the resistance of the guardians of the ruins. And what awaits them beyond that...
+_0.120
+・Visit the archipelago
+_0.121
+- Investigate the Gangreli ruins
+_0.122
+・Defeat the giant guardian weapon
+_0.123
+- Return to my ship and fold to the desert.
+_0.125
+4-1 Ancient records
+_0.126
+The desert was silent. Rion goes to the Hunters Guild in Creef Town to find out what's going on...
+_0.127
+When I returned from desert reconnaissance, Aisha instructed me to investigate the ruins. Danger approaches Mina as she tries to link to a device in a ruins for the first time...
+_0.128
+・Head to the Hunters Guild in Creef Town.
+_0.129
+- Investigate the Alfozur Ruins
+_0.131
+4-2 Gunness's trick
+_0.132
+It is said that a group of bandits called Strange Bear are using a jamming device to disrupt communications throughout the desert. As a result, the activities of the Hunter's Guild have also stalled. I have to do something…
+_0.133
+・Defeat the bandits scattered in the desert
+_0.134
+- Head to Hazrune Cave.
+_0.135
+- Investigate Hazrun Cave
+_0.137
+4-3 Cheryl's fever
+_0.138
+Cheryl collapsed with a high fever of unknown cause. In search of a cure, Mina decides to link to the library ruins where information about ancient Ouroboros is stored.
+_0.139
+・Find the Ouroboros cactus in the oasis
+_0.141
+4-4 fastest man
+_0.142
+In the town of Jurgen, where the Vanquish Race has resumed, a racer with unprecedented techniques has appeared. It seems that the man is rumored to have come from the past.
+_0.143
+・Find the "man from the past" in Jurgen's town
+_0.144
+・Escape from Havamar
+_0.146
+5-1 Wind Guide
+_0.147
+It seems that the person Isamu was protecting is somewhere in the desert. The landmark is said to be a bird.
+_0.148
+It is said that the person near the bird-like rock headed for nearby ruins. Who exactly is that person?
+_0.149
+When you arrive at the ruins, you will encounter a battle between the Zentraedi. In the midst of this, he meets Sarah Nome, the person Isamu was protecting, and goes to investigate the ruins with Sarah.
+_0.150
+・Look for something similar to a "bird" somewhere in the desert
+_0.151
+・Head to the Sangetal Ruins
+_0.152
+-Quiet the Zentraedi conflict
+_0.153
+- Investigate the Sangetal Ruins
+_0.155
+5-2 Creef Town
+_0.156
+Sarah encounters Cheryl, who claims to be her sister Mao's daughter, and accepts the timeless situation. Sarah goes shopping with Cheryl to Creef Town, and her eyes widen at the sight of a different culture.
+_0.157
+Sarah goes shopping in Creef Town and encounters a different culture. Something in the water touched Sarah's senses. What is the water around Creef Town?
+_0.158
+・Head to the shop in Creef Town
+_0.159
+- Investigate Grotti Cave
+_0.161
+5-3 Kamjin's strategy
+_0.162
+Rion and his friends are wary of Kamujin, who is showing disturbing movements, but at that time, the desert bandits begin to make noise, as if in response to Kamujin's movements.
+_0.163
+・Defeat the bandits occupying the town
+_0.164
+・Capture the mastermind of the rebellion
+_0.166
+5-4 Rescue
+_0.167
+Rion and his friends, who have doubts about the existence of Havamar, receive a message from Grace. It was an SOS requesting the rescue of Grace and Ranka, who had been captured by Havamar!
+_0.168
+・Head to Thrudheim Fortress
+_0.169
+- Investigate Thrudheim Fortress
+_0.170
+・Repel the rod
+_0.172
+6-1 Secret Management
+_0.173
+Rion and his friends return to the archipelago to re-investigate the ruins. They decide to set up a surveillance pod around the archipelago, but the eyes of the people they encounter are intently focused on Mina.
+_0.174
+- Head to the first pod installation point.
+_0.175
+- Head to the second pod installation point.
+_0.176
+- Head to the third pod installation point
+_0.177
+- Head to the fourth pod installation point.
+_0.180
+Mina's first live performance will be held at Buritai City in response to the expectations of the people of the archipelago! Be prepared for the risks...Rion and his friends put their bodies on the line to protect Mina in order to make the live a success.
+_0.182
+6-3 Mayan girl
+_0.183
+Just after Mina's first live performance, Sara's younger sister Mao contacts her through the Hunter Guild. The sisters are happy to be reunited, but a shadow approaches Mao.
+_0.184
+・Go to Yue
+_0.185
+・Defeat Havamar
+_0.186
+・Meet Kamjin in Yue
+_0.188
+6-4 Assassin from ZERO
+_0.189
+Information from Kamjin reveals that Myun's location is Havamar base in the archipelago. Rion and his friends watch Havamar's movements as they watch Garud fly by.
+_0.190
+・Head to Mythos Base
+_0.191
+- Investigate the Mythos base
+_0.193
+6-5 Feelings that don't intersect
+_0.194
+Aisha's analysis of the Fold Ruins on the Glacier is not progressing as expected. Leon decides to go see the Fold ruins in the desert in order to be of some help.
+_0.195
+Aisha, who had refreshed herself at the oasis, instructed us to investigate the Fold ruins in the desert.
+_0.196
+- Investigate the area around Helblindi Ruins
+_0.197
+-Meet Rod at Morricone Hill
+_0.198
+- Investigate the Helblindi Ruins
+_0.199
+- Return to my ship and fold to the glacier.
+_0.201
+7-1 Super Dimension Cinderella
+_0.202
+Havamar, led by Todo, reveals its fangs, and a troubled Shin continues to search for answers under Todo. Meanwhile, Rion and his friends cross the glacier and head to the fourth ruin sealed by Ranka.
+_0.203
+- Investigate the Flopt ruins
+_0.205
+7-2 Minmei recaptured
+_0.206
+A sudden communication from Kamjin. Rion decides to board the Havamar base in order to retrieve Lin Minmei. Will Minmei be okay? And what are Kamjin's intentions?
+_0.207
+- Investigate Kanonas base
+_0.208
+・Chase Kamjin
+_0.210
+7-3 Legendary singing voice
+_0.211
+The diva who seals the fifth ruin is Lin Minmei. Minmei, who was reunited with Teru Ichijo, expresses her feelings on the stage of the ruins...The legendary singing voice echoes.
+_0.212
+- Investigate the Gagnraz Ruins
+_0.214
+7-4 showdown! SMS
+_0.215
+As Leon and his friends hurry to seal the six ruins, an SMS appears in front of them. Even though I tried to contact him, the SMS showed hostility . What happened?
+What is behind S. MS …
+_0.216
+Respond to SMS under Havamar's influence
+_0.217
+・Fight back against Macross Quarter
+_0.219
+8-1 Legendary Ace Pilot
+_0.220
+Sharon and the insane SMS , Leon and his friends evacuate to the archipelago. Use your wits to repel Sharon. Just then, Havamar's pursuit approaches...
+_0.221
+・Go to Basara's location.
+_0.222
+・Defeat the Havamar pursuit force
+_0.224
+8-2 Sound Energy System
+_0.225
+According to information from Max, who has joined them, it seems that the key equipment to defeat Sharon is hidden in the Havamar base on the archipelago. That was the base where they had searched for Myun before.
+_0.227
+8-3 Singing voice echoing on the planet
+_0.228
+In order to confront Sharon, they succeeded in developing a Sound Buster based on the parts they obtained on the archipelago, and when they returned to the glacier, they found that Sharon had also increased her power.
+_0.229
+・Fight back against Implant Vajra
+_0.230
+・Fight back against Shin
+_0.231
+・Ivanov, fight back against Nora.
+_0.232
+・Defeat Sharon
+_0.234
+8-4 last boot
+_0.235
+Rion and his friends go to the sixth ruin to seal it with Myun's song. The singing voice of Myun, who is caught between Isamu and Garud, is filled with various thoughts and echoes in the silent ruins.
+_0.236
+・Go to investigate the ruins
+_0.238
+8-5 intermission
+_0.239
+Before proceeding to the final chapter, check to see if there is anything left to do, such as strengthening the aircraft or completing side quests.
+_0.240
+・Return to My Ship and select proceed to the final chapter
+_0.242
+9-1 decisive battle
+_0.243
+Rion and his friends succeeded in sealing the six ruins. Just as Mina is happy to be freed from her past, Todo's evil hand attacks her.
+Angry, Rion takes off in his YF-30 .
+_0.244
+・Go to Glasheim Fortress
+_0.245
+- Investigate Glasheim Fortress
+_0.246
+・Escape from Glasheim Fortress
+_0.248
+9-2 Fold Evil
+_0.249
+YF-30 and encounters Fold Evil, a fusion of Todo, who is obsessed with the past. He takes on a seemingly impossible battle to rescue the captured Mina and Aisha.
+_0.250
+・Break through the cocoon shell
+_0.251
+・Defeat the guardian weapon
+_0.252
+- Deal damage to Fold Evil
+_0.253
+・Rescue Aisha and Mina
+_0.254
+・Return to Macross Quarter
+_0.255
+・Desert the finishing blow to Todo

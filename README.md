@@ -37,9 +37,9 @@ Export/Import game text. for main story dialog, mission text etc. translation
 - == Export Utf-8 text :  m30text.exe GOP_out/data/gop/gop_battletext.gop >  battletext_jap.txt
 - == translate text in export files. Do not change the special position tag ( start with "_0." ) in the exported text file. Focus on translate just the text itself, use a text editor that support UTF-8 text (i.e. notepad++).
 - == Line break are important and nessessary. If you break up a line, the same text will also break into two lines in game. This is nesessary due to japanese does not use space to separate words. There is no auto line warp support in game code.
-- ==  There is a limitation on the compressed text size. the tranlated text will be compressed during repack, game will freeze if it is bigger than original gop. so be concise when translate the text. English translation seem compressed better shorter than Japanese and not have a issue.
+- ==  There is a limitation on the compressed text size. the translated text will be compressed during repack, game will freeze if compressed size is bigger than original gop. So be concise when translate the text. English translation seem compressed well and I have not have any issue.
 - == Import translated text back to gop file:  m30text.exe  GOP_out/data/gop/gop_battletext.gop  battletext_eng.txt
-- == you may see a warning about gop file is bigger than original. that may be okay as next step will compress it.
+- == you may see a warning about gop file is bigger than original. that may be okay as the gop reimport step will compress it.
 - == you will get a  GOP_out/data/gop/gop_battletext.gop.trn file. copy it to gop_mod/data/gop/gop_battletext.gop (see import instruction below)
 - == [ optional end ]
 - ==
@@ -54,7 +54,7 @@ Export/Import game text. for main story dialog, mission text etc. translation
 -  FTP this modified data.dat back to PS3 console harddrive and replaced the original data.dat
 -  If you have RPCS3 emulator , you can test this data.dat with that. But this game is not fully playable with emulator. 
 
-# other files. There are images, 3d model files in  data*.dat  and fileset*.dat file. they can be extract with 
+# other files. There are images, 3D model files in  data*.dat  and fileset*.dat file. they can be extract with 
 -     quickbms.exe macross_pidx.bms  pack.idx   output_dir ( this extrace everything from data*.dat, probably also from fileset*.dat)
 -     quickbms.exe macross_fsts.bms fileset0.dat  output_dir ( this only extract one fileset0.dat, may be of some use)
 

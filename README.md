@@ -15,7 +15,7 @@ Export/Import game text. for main story dialog, mission text etc. translation
 # Acknowledgment
 - Luigi Auriemma : the expert of game file extraction. author of QuickBMS.exe, macross_pidx.bms, macross_fsts.bms and many tools.
 
-I discovered that there is a second copy of gop arihive inside data.dat which contains the actual gop text files, made macross_pidx_off2.bms to extract that.
+I discovered that there is a second copy of gop archive inside data.dat which contains the actual gop text files, made macross_pidx_off2.bms to extract that.
 
 # How to use
  You need a modded PS3 game console to get the data.dat file. After the game installed, use ftp to copy data.dat from the console harddisk, something like this:

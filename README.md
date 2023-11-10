@@ -65,5 +65,8 @@ Export/Import game text. for main story dialog, mission text translation
      - use Google document translate feature to translate the .docx file. Get a english/other language .docx back.
      - copy and paste docx content back to a a plain UTF-8 text file.
      - use m30text.exe tool to import text back to gop file.
-
+     
+![alt text](https://github.com/alanm20/m30text/blob/main/images/eng2.png)
+![alt text](https://github.com/alanm20/m30text/blob/main/images/eng4.png)
+![alt text](https://github.com/alanm20/m30text/blob/main/images/eng6.png)
 

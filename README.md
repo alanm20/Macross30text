@@ -32,7 +32,7 @@ I discovered that there is a second copy of gop archive inside data.dat which co
 - run  quickbms.exe macross_fsts.bms data_out/gop gop_out
 - you will find all gop file under gop_out/data/gop/*.gop
 - not all gop file contain text, the important one are gop_battletext.gop , gop_dictionary, gop_scenariotext.gop, gop_subquesttext.gop. Check every gop file.
-- you can use utf-8+hex editor to replace japanese text in gop file, provided that new text is shorter than japanese text
+- you can use utf-8/hex editor to replace Japanese text in gop file, provided that translated text is shorter than japanese text
 - ==
 - == [ optional start ] this section is optional. 
 - == Export Utf-8 text :  m30text.exe gop_out/data/gop/gop_battletext.gop >  battletext_jap.txt
@@ -48,11 +48,11 @@ I discovered that there is a second copy of gop archive inside data.dat which co
 -           # first create a new directory path reflecting the extract file path. copy and rename *.gop.trn to *.gop file
 -           mkdir  gop_mod/data/gop/
 -           copy    gop_out/data/gop/gop_battletext.gop.trn  gop_mod/data/gop/gop_battletext.gop
--            # the following command give the new path to quickbms to reimport all files in that path back to out/gop file
+-            # the following command give the new path to quickbms to reimport all files in that path back to data_out/gop file
 -           quickbms.exe -r -w  macross_fsts.bms data_out/gop gop_mod
 -            # if you get prompt for whether to use experimental reimport feature, anwser 'y'
 - Since data_out only contains one gop file. just run quickbms.exe to import that path back to data.dat
--           quickbms.exe -r -w  macross_pidx_off2.bms data.dat data_out
+-           quickbms.exe -r -w  macross_pidx_offet2.bms data.dat data_out
 -  FTP this modified data.dat back to PS3 console harddrive and replaced the original data.dat
 -  If you have RPCS3 emulator , you can test this data.dat with that. But this game is not fully playable with emulator. 
 

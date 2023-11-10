@@ -1,9 +1,9 @@
-# m30text
-[PS3] Macross 30th Anniversary Game Text tool
+# Macross30text
+[PS3] Macross 30th Anniversary: Voices Across the Galaxy game text tool
 
-Export/Import game text. for main story dialog, mission text translation
+Export/Import game text. for main story dialog, mission text etc. translation
 
-- Most on screen UI text are actually images. that can only be change using paint application
+- Most on screen UI text are actually images. those can only be change using paint application
 
 
 # For archival purpose, tool is not being update

@@ -38,12 +38,13 @@ Export/Import game text. for main story dialog, mission text etc. translation
 - == translate text in exported files. Do not change the special position tag ( start with "_0." ) in the exported text file. Focus on translate just the text itself, use a text editor that support UTF-8 text (i.e. notepad++).
 - == Manual line breaks are important and nessessary. Break up a long text line into multiple lines if it wraps incorrectly in game. This is nesessary due to japanese does not use space to separate words, line wrap can happen between any characters. There is no western word warp support in game code.
 - ==  There is a limitation on the compressed text size. the translated text will be compressed during repack, game will freeze if compressed size is bigger than original gop. So be concise when translate the text. English translation compressed well and I have not seen any issue.
-- == Import translated text back to gop file:  m30text.exe  GOP_out/data/gop/gop_battletext.gop  battletext_eng.txt
+- == Import translated text back to gop file:  m30text.exe  gop_out/data/gop/gop_battletext.gop  battletext_eng.txt
 - == you may see a warning about gop file is bigger than original. that may be okay as the gop reimport step will compress it.
-- == you will get a  GOP_out/data/gop/gop_battletext.gop.trn file. copy it to gop_mod/data/gop/gop_battletext.gop (see import instruction below)
+- == you will get a gop_out/data/gop/gop_battletext.gop.trn file. copy it to gop_mod/data/gop/gop_battletext.gop (see import instruction below)
 - == [ optional end ]
 - ==
-- Import just the modified .gop file to gop archive : first create a new directory path reflecting the extract file path. copy and rename *.gop.trn to *.gop file
+- Import just the modified .gop file to gop archive :
+-           # first create a new directory path reflecting the extract file path. copy and rename *.gop.trn to *.gop file
 -           mkdir  gop_mod/data/gop/
 -           copy    gop_out/data/gop/gop_battletext.gop.trn  gop_mod/data/gop/gop_battletext.gop
 -            # the following command give the new path to quickbms to reimport all files in that path back to out/gop file
